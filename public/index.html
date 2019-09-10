@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/style.css">
+    <title>FEC Demo</title>
+  </head>
+  <body>
+    <img id="background" src="background.png">
+    <div class="flex column">
+      <div id="app"></div>
+      <div class="flex">
+        <div></div>
+        <div id="reservations"></div>
+      </div>
+    </div>
+<!-- These two lines are just one way to get the React library running in the client's browser -->
+    <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/styled-components/dist/styled-components.min.js"></script>
+    <script src="http://localhost:3001/bundle.js"></script>
+    <script src="http://localhost:3002/bundle.js"></script>
+    <!-- see: https://reactjs.org/docs/react-without-jsx.html -->
+    <script>
+      Reservations.default.ReactDOM.render(
+        Reservations.default.React.createElement(Reservations.default.Reservations),
+        document.getElementById('reservations')
+      );
+
+      ReactDOM.render(React.createElement(App), document.getElementById('app'));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+#reservations {
+  left: 812px;
+  position: relative;
+}
+
+#background {
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex-direction: column;
+}
+
+#app {
+  height: 523px;
+  z-index: 10;
+}
