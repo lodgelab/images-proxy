@@ -1,1 +1,1 @@
-# images-proxy
+# reservations-proxy
