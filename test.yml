@@ -1,0 +1,12 @@
+config:
+  target: "http://localhost:3000"
+  http:
+  phases:
+    - duration: 60
+      arrivalRate: 50
+
+scenarios:
+  - name: "Get listing images"
+    flow:
+      - get:
+          url: "/ssr/listings/{{$randomNumber(0,10000000)}}"
